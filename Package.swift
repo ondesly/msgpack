@@ -12,7 +12,10 @@ let package = Package(
         .target(
             name: "c_msgpack",
             path: "include",
-            publicHeadersPath: "."
+            publicHeadersPath: ".",
+            cSettings: [
+                .define("MSGPACK_NO_BOOST"),
+            ],
         )
     ],
     cxxLanguageStandard: .cxx11
